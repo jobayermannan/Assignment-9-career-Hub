@@ -4,6 +4,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Navbar from './assets/Components/Navbar';
 import Header from './assets/Components/Header/Header';
+import JobCategory from './assets/Components/JobCategory/JobCategory';
+import FeaturedJobs from './assets/Components/FeaturedJobs/FeaturedJobs';
 
 
 function App() {
@@ -13,6 +15,8 @@ function App() {
     <>
   <Navbar></Navbar>
   <Header></Header>
+  <JobCategory></JobCategory>
+ <FeaturedJobs></FeaturedJobs>
     </>
   )
 }
