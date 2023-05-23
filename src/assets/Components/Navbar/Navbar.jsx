@@ -1,7 +1,8 @@
 import React from 'react';
 import { Bars3Icon } from '@heroicons/react/24/solid'
-import { Link } from 'react-router-dom';
-import Statistics from './../Statistics/Statistics';
+import { NavLink} from 'react-router-dom';
+
+
 
 
 
@@ -18,31 +19,31 @@ const Navbar = () => {
       <Bars3Icon className="h-6 w-6 text-blue-950   " />
       </label>
       <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-        <li ><p  className='font-semibold border-none hover:bg-indigo-400 text-blue-950 '><Link to="/statistics">Statistics</Link> </p></li>
+        <li ><p  className='font-semibold border-none hover:bg-indigo-400 text-blue-950 '><NavLink to="/statistics" className="hover:text-stone-200">Statistics</NavLink> </p></li>
         <li tabIndex={0}>
           <p className="justify-between font-semibold border-none hover:bg-indigo-400 text-blue-950 ">
-          <Link to="/appliedJOb"> Applied Job</Link>
+          <NavLink to="/appliedJOb" className="hover:text-stone-200"> Applied Job</NavLink>
       
           </p>
     
         </li>
-        <li><p className='font-semibold border-none hover:bg-indigo-400 text-blue-950 '><Link to="/blog"> Blog</Link> </p></li>
+        <li><p className='font-semibold border-none hover:text-slate-400 '><NavLink to="/blog" className="hover:text-stone-200" > Blog</NavLink> </p></li>
       </ul>
     </div>
-    <a className=" normal-case lg:text-2xl sm: text-sm font-extrabold ">
-    <Link to="/"> FINDCareer</Link>   </a>
+    <p className=" normal-case lg:text-2xl sm: text-sm font-extrabold  hover:text-slate-400 ">
+    <NavLink to="/"  > FINDCareer</NavLink>   </p>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-      <li ><p className='font-semibold border-none hover:bg-indigo-400 text-blue-950 '> <Link to="/statistics"> Statistics</Link></p></li>
+      <li ><p className='font-semibold border-none hover:bg-indigo-400 text-blue-950 '> <NavLink to="/statistics" className="hover:text-stone-200" > Statistics</NavLink></p></li>
       <li tabIndex={0}>
-        <p className='font-semibold border-none hover:bg-indigo-400 text-blue-950 '>
-       <Link to="/appliedJOb"> Applied Job</Link> 
+        <p className='font-semibold border-none hover:bg-indigo-400   '>
+       <NavLink to="/appliedJOb" className='hover:text-stone-200 '> Applied Job</NavLink> 
     
         </p>
        
       </li>
-      <li><p className='font-semibold  border-none hover:bg-indigo-400 text-blue-950 '> <Link to="/blog"> Blog</Link> </p></li>
+      <li><p className='font-semibold  border-none hover:bg-indigo-400 text-blue-950 '> <NavLink to="/blog" className="hover:text-stone-200" > Blog</NavLink> </p></li>
     </ul>
   </div>
   <div className="navbar-end">

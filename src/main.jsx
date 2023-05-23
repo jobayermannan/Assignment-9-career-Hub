@@ -9,15 +9,17 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import FeaturedJobCard from './assets/Components/featuredJobCard/featuredJobCard.jsx';
-import FeaturedJobs from './assets/Components/FeaturedJobs/FeaturedJobs.jsx';
-import Header from './assets/Components/Header/Header.jsx';
-import Main from './assets/Components/Layout/Main.jsx';
-import Navbar from './assets/Components/Navbar.jsx';
+
+
+
+
+
 import Blog from './assets/Blog/Blog.jsx';
 import Statistics from './assets/Statistics/Statistics.jsx';
 import AppliedJobs from './assets/AppliesJobs/AppliedJobs.jsx';
-import JobCategory from './assets/Components/JobCategory/JobCategory.jsx';
+
+import Main from './assets/Components/Layout/Main';
+import Header from './assets/Components/Header/Header.jsx';
 
 const router = createBrowserRouter([
   {
@@ -26,7 +28,7 @@ const router = createBrowserRouter([
     children :[
       {
        path: "/",
-       element:<Header></Header>,
+       element:<Header></Header>
        
       },
       {
