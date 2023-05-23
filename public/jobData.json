@@ -1,0 +1,112 @@
+{
+    "jobs": [
+      {
+        "id": 1,
+        "company_logo": "../src/assets/Images/All Images/Group 10021.png",
+        "job_title": "Software Engineer",
+        "company_name": "ABC Inc.",
+        "remote_or_onsite": "Remote",
+        "location": "Any",
+        "fulltime_parttime": "Fulltime",
+        "salary": "$80,000 - $100,000",
+        "job_description": "We are seeking a talented Software Engineer...",
+        "job_responsibility": "Designing and implementing software...",
+        "educational_requirements": "Bachelor's degree in Computer Science...",
+        "experiences": "2+ years of relevant experience...",
+        "contact_information": {
+          "phone": "123-456-7890",
+          "email": "jobs@abcinc.com"
+        }
+      },
+      {
+        "id": 2,
+        "company_logo": "../src/assets/Images/All Images/netflix-4 1.png",
+        "job_title": "Marketing Manager",
+        "company_name": "XYZ Corp.",
+        "remote_or_onsite": "Onsite",
+        "location": "New York, NY",
+        "fulltime_parttime": "Fulltime",
+        "salary": "$70,000 - $90,000",
+        "job_description": "We are seeking a skilled Marketing Manager...",
+        "job_responsibility": "Developing and implementing marketing strategies...",
+        "educational_requirements": "Bachelor's degree in Marketing or related field...",
+        "experiences": "5+ years of marketing experience...",
+        "contact_information": {
+          "phone": "987-654-3210",
+          "email": "jobs@xyzcorp.com"
+        }
+      },
+      {
+        "id": 3,
+        "company_logo": "../src/assets/Images/All Images/netflix-4 1.png",
+        "job_title": "Graphic Designer",
+        "company_name": "Design Co.",
+        "remote_or_onsite": "Onsite",
+        "location": "San Francisco, CA",
+        "fulltime_parttime": "Part-time",
+        "salary": "$25 - $30 per hour",
+        "job_description": "We are looking for a creative Graphic Designer...",
+        "job_responsibility": "Creating visually appealing designs...",
+        "educational_requirements": "Associate's degree in Graphic Design...",
+        "experiences": "2+ years of graphic design experience...",
+        "contact_information": {
+          "phone": "555-123-4567",
+          "email": "jobs@designco.com"
+        }
+      },
+      {
+        "id": 4,
+        "company_logo": "../src/assets/Images/All Images/netflix-4 1.png",
+        "job_title": "Financial Analyst",
+        "company_name": "Finance Corp.",
+        "remote_or_onsite": "Remote",
+        "location": "Any",
+        "fulltime_parttime": "Fulltime",
+        "salary": "$60,000 - $80,000",
+        "job_description": "We are hiring a Financial Analyst...",
+        "job_responsibility": "Analyzing financial data...",
+        "educational_requirements": "Bachelor's degree in Finance...",
+        "experiences": "3+ years of financial analysis experience...",
+        "contact_information": {
+          "phone": "111-222-3333",
+          "email": "jobs@financecorp.com"
+        }
+      },
+      {
+        "id": 5,
+        "company_logo": "../src/assets/Images/All Images//Group 10021.png",
+        "job_title": "Sales Representative",
+        "company_name": "Sales Ltd.",
+        "remote_or_onsite": "Onsite",
+        "location": "Chicago, IL",
+        "fulltime_parttime": "Fulltime",
+        "salary": "$50,000 - $70,000",
+        "job_description": "We are seeking a motivated Sales Representative...",
+        "job_responsibility": "Generating leads and closing sales...",
+        "educational_requirements": "High school diploma or equivalent...",
+        "experiences": "1+ year of sales experience...",
+        "contact_information": {
+        "phone": "444-555-6666",
+        "email": "jobs@salesltd.com"
+        }
+        },
+        {
+        "id": 6,
+        "company_logo": "../src/assets/Images/All Images/netflix-4 1.png",
+        "job_title": "Human Resources Manager",
+        "company_name": "HR Solutions",
+        "remote_or_onsite": "Onsite",
+        "location": "Houston, TX",
+        "fulltime_parttime": "Fulltime",
+        "salary": "$80,000 - $100,000",
+        "job_description": "We are hiring an experienced Human Resources Manager...",
+        "job_responsibility": "Developing and implementing HR policies and procedures...",
+        "educational_requirements": "Bachelor's degree in Human Resources or related field...",
+        "experiences": "5+ years of HR management experience...",
+        "contact_information": {
+        "phone": "777-888-9999",
+        "email": "jobs@hrsolutions.com"
+        }
+        }
+        ]
+        }  

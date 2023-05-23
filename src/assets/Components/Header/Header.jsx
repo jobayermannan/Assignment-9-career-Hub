@@ -1,11 +1,13 @@
 import React from 'react';
 import Avater from '../../Images/All Images/Avater.png' 
+import JobCategory from '../JobCategory/JobCategory';
+import FeaturedJobs from '../FeaturedJobs/FeaturedJobs';
 
 const Header = () => {
     return (
 
 
-
+<>
 
 <div className="hero min-h-screen bg-indigo-50 rounded-xl ">
   <div className="hero-content flex flex-col lg:flex-row-reverse">
@@ -19,8 +21,10 @@ const Header = () => {
     </div>
   </div>
 </div>
+ <JobCategory></JobCategory>
+ <FeaturedJobs></FeaturedJobs>
 
-
+ </>
 
 
     );
