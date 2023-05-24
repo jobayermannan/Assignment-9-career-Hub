@@ -20,11 +20,13 @@ import AppliedJobs from './assets/AppliesJobs/AppliedJobs.jsx';
 
 import Main from './assets/Components/Layout/Main';
 import Header from './assets/Components/Header/Header.jsx';
+import NotFound from './assets/Components/NotFoundPage/NotFound.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+  
     children :[
       {
        path: "/",
@@ -42,7 +44,12 @@ const router = createBrowserRouter([
       {
         path: "/appliedJob",
         element:<AppliedJobs></AppliedJobs>,
+      },
+      {  
+        path:"*",
+      element:<NotFound></NotFound>,
       }
+    
     ]
   }
 ])

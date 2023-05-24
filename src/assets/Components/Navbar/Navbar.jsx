@@ -1,15 +1,20 @@
 import React from 'react';
 import { Bars3Icon } from '@heroicons/react/24/solid'
-import { NavLink} from 'react-router-dom';
+import { NavLink, useLocation, } from 'react-router-dom';
 
 
 
 
 
 const Navbar = () => {
+  const location = useLocation();
+  const withBackground = location.pathname === '/appliedJob';
+  console.log(withBackground);
+ 
+ 
     return (
-      <nav>
-        <div className='mb-6'>
+      <nav  className={withBackground ? 'bg-indigo-50 ' : ''}>
+        <div className={` ${withBackground ? 'mb-0' : 'mb-6'}`}>
             <div className="navbar ">
   <div className="navbar-start">
     <div className="dropdown ">
@@ -22,12 +27,12 @@ const Navbar = () => {
         <li ><p  className='font-semibold border-none hover:bg-indigo-400 text-blue-950 '><NavLink to="/statistics" className="hover:text-stone-200">Statistics</NavLink> </p></li>
         <li tabIndex={0}>
           <p className="justify-between font-semibold border-none hover:bg-indigo-400 text-blue-950 ">
-          <NavLink to="/appliedJOb" className="hover:text-stone-200"> Applied Job</NavLink>
+          <NavLink to="/appliedJob" className="hover:text-stone-200"> Applied Job</NavLink>
       
           </p>
     
         </li>
-        <li><p className='font-semibold border-none hover:text-slate-400 '><NavLink to="/blog" className="hover:text-stone-200" > Blog</NavLink> </p></li>
+        <li><p className='font-semibold border-none hover:bg-indigo-400 '><NavLink to="/blog" className="hover:text-stone-200" > Blog</NavLink> </p></li>
       </ul>
     </div>
     <p className=" normal-case lg:text-2xl sm: text-sm font-extrabold  hover:text-slate-400 ">
@@ -38,7 +43,7 @@ const Navbar = () => {
       <li ><p className='font-semibold border-none hover:bg-indigo-400 text-blue-950 '> <NavLink to="/statistics" className="hover:text-stone-200" > Statistics</NavLink></p></li>
       <li tabIndex={0}>
         <p className='font-semibold border-none hover:bg-indigo-400   '>
-       <NavLink to="/appliedJOb" className='hover:text-stone-200 '> Applied Job</NavLink> 
+       <NavLink to="/appliedJob" className='hover:text-stone-200 '> Applied Job</NavLink> 
     
         </p>
        
