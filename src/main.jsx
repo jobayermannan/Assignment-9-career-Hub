@@ -21,6 +21,8 @@ import AppliedJobs from './assets/AppliesJobs/AppliedJobs.jsx';
 import Main from './assets/Components/Layout/Main';
 import Header from './assets/Components/Header/Header.jsx';
 import NotFound from './assets/Components/NotFoundPage/NotFound.jsx';
+import { JournalBookmark } from 'react-bootstrap-icons';
+import JobDetails from './assets/Components/JobDetails/JobDetails';
 
 const router = createBrowserRouter([
   {
@@ -45,6 +47,20 @@ const router = createBrowserRouter([
         path: "/appliedJob",
         element:<AppliedJobs></AppliedJobs>,
       },
+      {
+        path: "jobs/:jobId",
+        element: <JobDetails />,
+        loader: async  ({ params }) =>  {
+          const res = await fetch('/jobData.json')
+         const data = await res.json();
+         const singleData= data.find(d => d.id == params.jobId)
+         return  singleData;
+        }
+       
+         
+      },
+      
+      
       {  
         path:"*",
       element:<NotFound></NotFound>,

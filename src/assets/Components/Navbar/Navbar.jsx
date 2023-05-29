@@ -8,8 +8,12 @@ import { NavLink, useLocation, } from 'react-router-dom';
 
 const Navbar = () => {
   const location = useLocation();
-  const withBackground = location.pathname === '/appliedJob';
-  console.log(withBackground);
+const dynamicLocationPattern = /^\/jobs\/\d+$/; // Replace with your desired pattern
+
+const withBackground = location.pathname === '/appliedJob' || dynamicLocationPattern.test(location.pathname);
+
+
+  
  
  
     return (

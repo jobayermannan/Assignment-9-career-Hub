@@ -2,8 +2,9 @@ import React from 'react';
 
 import { CurrencyDollarIcon } from '@heroicons/react/24/solid'
 import {MapPinIcon } from '@heroicons/react/24/solid'
+import { Link } from 'react-router-dom';
 const FeaturedJobCard = ({featureCard}) => {
-   const {company_logo,job_title,location,remote_or_onsite,fulltime_parttime,company_name,salary}=featureCard;
+   const {company_logo,job_title,id,location,remote_or_onsite,fulltime_parttime,company_name,salary}=featureCard;
     return (
         <div>
             <div className="card bg-base-100 shadow-xl">
@@ -32,9 +33,11 @@ const FeaturedJobCard = ({featureCard}) => {
       </div>
 
       <div className="card-actions text-center ml-4 lg:ml-0 lg:text-left sm:text-center   mt-2">
+        <Link to={`/jobs/${id}`}>
         <button className="btn rounded-md bg-indigo-400 text-slate-100 hover:bg-slate-400 border-none btn-sm lg:btn-md lg:font-semibold font-normal">
-          View Details
+        View Details
         </button>
+        </Link>
       </div>
     </div>
   </div>

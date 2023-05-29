@@ -7,7 +7,7 @@ import FeaturedJobCard from '../featuredJobCard/featuredJobCard';
 const FeaturedJobs = () => {
   const [featureCards,setFeatureCard] =useState([])
   useEffect(()=> {
-    fetch ('jobData.json').then((res) => res.json()).then((data) =>setFeatureCard (data.jobs))
+    fetch ('jobData.json').then((res) => res.json()).then((data) =>setFeatureCard (data))
 
   },[])
     return (
