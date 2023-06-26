@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import google from "../../Images/All Images/google-1-1 1.png"
 
 import FeaturedJobCard from '../featuredJobCard/featuredJobCard';
+import { addToDb } from '../../Utils/fakeDb';
 
 
 const FeaturedJobs = () => {
@@ -10,6 +11,12 @@ const FeaturedJobs = () => {
     fetch ('jobData.json').then((res) => res.json()).then((data) =>setFeatureCard (data))
 
   },[])
+  const handleAddToAppliedJobs= (id) =>{
+       
+    addToDb(id)
+}
+  
+
     return (
       <>
        <section>
@@ -22,7 +29,7 @@ const FeaturedJobs = () => {
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
       {
-        featureCards.map((featureCard)=> <FeaturedJobCard key={featureCard.id} featureCard={featureCard}> </FeaturedJobCard>)
+        featureCards.map((featureCard)=> <FeaturedJobCard key={featureCard.id} featureCard={featureCard} handleAddToAppliedJobs={handleAddToAppliedJobs}> </FeaturedJobCard>)
       }
 </div>
 

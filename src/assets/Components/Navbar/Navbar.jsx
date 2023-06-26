@@ -1,6 +1,7 @@
 import React from 'react';
 import { Bars3Icon } from '@heroicons/react/24/solid'
 import { NavLink, useLocation, } from 'react-router-dom';
+import { AppliedJobsProvider } from '../contextApi/contextApi';
 
 
 
@@ -31,7 +32,11 @@ const withBackground = location.pathname === '/appliedJob' || dynamicLocationPat
         <li ><p  className='font-semibold border-none hover:bg-indigo-400 text-blue-950 '><NavLink to="/statistics" className="hover:text-stone-200">Statistics</NavLink> </p></li>
         <li tabIndex={0}>
           <p className="justify-between font-semibold border-none hover:bg-indigo-400 text-blue-950 ">
-          <NavLink to="/appliedJob" className="hover:text-stone-200"> Applied Job</NavLink>
+            <AppliedJobsProvider>
+              
+          <NavLink to="/appliedJob" className="hover:text-stone-200"> Applied Jobs</NavLink>
+
+            </AppliedJobsProvider>
       
           </p>
     

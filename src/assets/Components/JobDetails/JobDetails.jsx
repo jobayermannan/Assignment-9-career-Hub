@@ -1,11 +1,46 @@
-import React from 'react';
-import coolImage from '../../../../public/img/Vector.png'
-import { useLoaderData } from 'react-router-dom';
+import React, { useContext } from 'react';
+import coolImage from '../../../../public/img/Vector.png';
+import { useLoaderData, useNavigate } from 'react-router-dom';
+import { AppliedJobsContext } from '../contextApi/contextApi';
+import { addToDb } from '../../Utils/fakeDb';
+
 
 const JobDetails = () => {
-  const jobs= useLoaderData();
-  const {job_title,contact_information,job_description,job_responsibility,educational_requirements,experiences,salary,location}=jobs
+  const jobs = useLoaderData();
+  const { job_title, contact_information, job_description, job_responsibility, educational_requirements, experiences, salary, location } = jobs;
+
+  const navigate = useNavigate();
+  const { addAppliedJob } = useContext(AppliedJobsContext);
+
+  const handleApplyClick = () => {
+    // Create the applied job object
+    const appliedJob = {
+      // Assign the job details
+      job_title,
+      contact_information,
+      job_description,
+      job_responsibility,
+      educational_requirements,
+      experiences,
+      salary,
+      location
+    };
+
+    // Add the applied job to the local storage
+  addToDb(appliedJob.id); // Assuming there is an 'id' property in the appliedJob object
+  console.log('Job added to local storage:', appliedJob);
+
+  // Add the applied job
+  addAppliedJob(appliedJob);
+  console.log('Job added to context:', appliedJob);
+
+  // Navigate to the applied jobs page
+  navigate('/appliedJob');
+  };
+
   
+
+
  
   return (
     <div>
@@ -51,7 +86,7 @@ const JobDetails = () => {
               <h2 className="text-md font-semibold">Job Details</h2>
               <p className="divider"></p>
               <p className="text-sm font-semibold">Salary: <span className='ml-2 font-thin'> {salary}</span> </p>
-              <p className="text-sm mr-2 font-semibold">Job Title: <spam className="ml-2 font-thin">  {job_title}</spam></p>
+              <p className="text-sm mr-2 font-semibold">Job Title: <span className="ml-2 font-thin">  {job_title}</span></p>
             </div>
             <div className="mt-2">
               <h2 className="font-bold mb-2 text-sm">Contact Information</h2>
@@ -62,7 +97,7 @@ const JobDetails = () => {
             </div>
           </div>
           <div className="pt-4 mt-auto">
-            <button className="btn btn-block border-none text-gradient bg-gradient-to-r from-indigo-400 rounded-md to-violet-500 text-white">Apply Now</button>
+            <button className="btn btn-block border-none text-gradient bg-gradient-to-r from-indigo-400 rounded-md to-violet-500 text-white"  onClick={handleApplyClick}>Apply Now</button>
           </div>
         </div>
       </div>

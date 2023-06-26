@@ -23,6 +23,7 @@ import Header from './assets/Components/Header/Header.jsx';
 import NotFound from './assets/Components/NotFoundPage/NotFound.jsx';
 import { JournalBookmark } from 'react-bootstrap-icons';
 import JobDetails from './assets/Components/JobDetails/JobDetails';
+import { AppliedJobsProvider } from './assets/Components/contextApi/contextApi.jsx';
 
 const router = createBrowserRouter([
   {
@@ -71,7 +72,15 @@ const router = createBrowserRouter([
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
+  
   <React.StrictMode>
-    <RouterProvider router={router} />
+ <AppliedJobsProvider>
+ <RouterProvider  router={router}>
+
+    
+</RouterProvider>
+ </AppliedJobsProvider>
+ 
+
   </React.StrictMode>,
 )
