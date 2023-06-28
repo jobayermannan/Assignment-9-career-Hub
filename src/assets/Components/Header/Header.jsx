@@ -1,5 +1,5 @@
 import React from 'react';
-import Avater from '../../Images/All Images/Avater.png' 
+import Avater from '../././../Images/All Images/Avater.png' 
 import JobCategory from '../JobCategory/JobCategory';
 import FeaturedJobs from '../FeaturedJobs/FeaturedJobs';
 

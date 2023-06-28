@@ -1,4 +1,3 @@
-
 import React, { createContext, useState } from 'react';
 
 export const AppliedJobsContext = createContext();
@@ -11,7 +10,7 @@ export const AppliedJobsProvider = ({ children }) => {
   };
 
   return (
-    <AppliedJobsContext.Provider value={{ appliedJobs, addAppliedJob }}>
+    <AppliedJobsContext.Provider value={{ appliedJobs, setAppliedJobs, addAppliedJob }}>
       {children}
     </AppliedJobsContext.Provider>
   );
